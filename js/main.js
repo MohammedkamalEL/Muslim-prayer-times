@@ -1,3 +1,35 @@
+let overlay = document.querySelector('.overlay');
+setTimeout(() => {
+    overlay.classList.add('hide')
+    setTimeout(() => {
+        overlay.style.display = 'none';
+    }, 900);
+}, 2000);
+
+
+
+let dark = document.getElementById('dark');
+let light = document.getElementById('light');
+
+let bodyTheme = document.body;
+
+function dark_() {
+    bodyTheme.setAttribute('data-theme', 'light')
+    light.classList.toggle('toggle');
+    dark.classList.toggle('toggle');
+}
+
+function light_() {
+    bodyTheme.setAttribute('data-theme', 'dark')
+    light.classList.toggle('toggle');
+    dark.classList.toggle('toggle');
+}
+
+
+
+
+
+
 // const { default: axios } = require("axios");
 let today = new Date()
 let the_day = document.getElementById('the_day');
@@ -202,31 +234,6 @@ function getCity(contery, city) {
 //     showContact.classList.toggle('show')
 // })
 
-
-let dark = document.getElementById('dark');
-let light = document.getElementById('light');
-
-let bodyTheme = document.body;
-
-function dark_() {
-    bodyTheme.setAttribute('data-theme', 'light')
-    light.classList.toggle('toggle');
-    dark.classList.toggle('toggle');
-}
-
-function light_() {
-    bodyTheme.setAttribute('data-theme', 'dark')
-    light.classList.toggle('toggle');
-    dark.classList.toggle('toggle');
-}
-
-let overlay = document.querySelector('.overlay');
-setTimeout(() => {
-    overlay.classList.add('hide')
-    setTimeout(() => {
-        overlay.style.display = 'none';
-    }, 900);
-}, 2000);
 
 
 document.addEventListener('DOMContentLoaded', function () {
